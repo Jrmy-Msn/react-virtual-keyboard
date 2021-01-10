@@ -16,7 +16,7 @@ Un clavier virtuel sous forme de composant ReactJS :
 
 | dark | light |
 | ---- | ----- |
-| ![Capture d'écran du clavier virtuel AZERTY](https://raw.githubusercontent.com/Jrmy-Msn/react-virtual-keyboard/main/docs/screenshot_1.png) |![Capture d'écran du clavier virtuel QWERTY](https://raw.githubusercontent.com/Jrmy-Msn/react-virtual-keyboard/main/docs/screenshot_2.png) |
+| ![Capture d'écran du clavier virtuel SOMBRE](https://raw.githubusercontent.com/Jrmy-Msn/react-virtual-keyboard/main/docs/screenshot_1.png) |![Capture d'écran du clavier virtuel CLAIR](https://raw.githubusercontent.com/Jrmy-Msn/react-virtual-keyboard/main/docs/screenshot_2.png) |
 
 - Sélection des touches du clavier virtuel par clique souris ou via le clavier physique
 
