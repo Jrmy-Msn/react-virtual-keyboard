@@ -1,5 +1,5 @@
 {
-  "name": "virtual-keyboard",
+  "name": "@jrmy-msn/react-virtual-keyboard",
   "version": "0.1.0",
   "private": false,
   "description": "Clavier virtuel développé en composant ReactJS",
