@@ -41,8 +41,8 @@ propTypes = {
 ##### feedbackForCurrentKey 
 
 Définir un nom de classe CSS pour styliser la touche du clavier virtuel en cours de sélection
-Par défaut, une CSS class `pressed` pour mettre en surbrillance la touche lorsque
-une touche du clavier physique est pressée (l'évènement `onKeyDown`)
+Une CSS class `.pressed` est prédéfinie pour mettre en surbrillance la touche lorsque
+une touche du clavier physique correspondante est pressée (l'évènement `onKeyDown`)
 
 ```css
 .VirtualKey:hover,
