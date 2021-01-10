@@ -4,15 +4,25 @@
 
 Un clavier virtuel sous forme de composant ReactJS :
 
-![Capture d'écran du clavier virtuel](https://github.com/Jrmy-Msn/react-virtual-keyboard/docs/screenshot_1.png)
+![Capture d'écran du clavier virtuel](https://raw.githubusercontent.com/Jrmy-Msn/react-virtual-keyboard/main/docs/screenshot_1.png)
 
 - Plusieurs dispositions de clavier disponibles : AZERTY, QWERTY, ALPHATBET
+
+| AZERTY | QWERTY | ALPHABET |
+| ------ | ------ | -------- |
+| ![Capture d'écran du clavier virtuel AZERTY](https://raw.githubusercontent.com/Jrmy-Msn/react-virtual-keyboard/main/docs/screenshot_AZERTY_dark.png) |![Capture d'écran du clavier virtuel QWERTY](https://raw.githubusercontent.com/Jrmy-Msn/react-virtual-keyboard/main/docs/screenshot_QWERTY_dark.png) | ![Capture d'écran du clavier virtuel ALPHABET](https://raw.githubusercontent.com/Jrmy-Msn/react-virtual-keyboard/main/docs/screenshot_1.png) |
+
 - 2 themes de couleur : sombre ou clair
+
+| dark | light |
+| ---- | ----- |
+| ![Capture d'écran du clavier virtuel AZERTY](https://raw.githubusercontent.com/Jrmy-Msn/react-virtual-keyboard/main/docs/screenshot_1.png) |![Capture d'écran du clavier virtuel QWERTY](https://raw.githubusercontent.com/Jrmy-Msn/react-virtual-keyboard/main/docs/screenshot_2.png) |
+
 - Sélection des touches du clavier virtuel par clique souris ou via le clavier physique
 
 ---
 
-### Props
+### `Props` du composant
 
 ```js
 propTypes = {
