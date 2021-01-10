@@ -1,7 +1,22 @@
 {
   "name": "virtual-keyboard",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "description": "Clavier virtuel développé en composant ReactJS",
+  "homepage": "https://github.com/Jrmy-Msn/react-virtual-keyboard/",
+  "bugs": {
+    "url": "https://github.com/Jrmy-Msn/react-virtual-keyboard/issues"
+  },
+  "author": {
+    "name": "Jrmy Msn"
+  },
+  "repository": {
+    "type": "github",
+    "url": "https://github.com/Jrmy-Msn/react-virtual-keyboard"
+  },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
