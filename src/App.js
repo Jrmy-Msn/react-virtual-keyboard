@@ -1,25 +1,60 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {Component} from 'react'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import './App.css'
+
+import Keyboard from './components/VirtualKeyboard/VirtualKeyboard'
+
+
+class App extends Component {
+  state = {
+    currentKey: '',
+    inputValue: '',
+  }
+
+  onSelectVirtualKey(vKey) {
+    const {inputValue} = this.state
+    this.setState({inputValue: inputValue + vKey})
+  }
+
+  // arrow func for binding this
+  feedbackForVirtualKey = (vKey) => {
+    const {currentKey} = this.state
+    return vKey === currentKey ? 'pressed' : ''
+  }
+
+  // arrow func for binding this
+  handleClickKey = (vKey) => {
+    this.onSelectVirtualKey(vKey)
+  }
+
+  // arrow func for binding this
+  handleKeyDown = ev => {
+    const key = ev.key && ev.key.toUpperCase()
+    this.setState({currentKey: key || ''})
+  }
+
+  // arrow func for binding this
+  handleKeyUp = (ev) => {
+    const key = ev.key && ev.key.toUpperCase()
+    this.setState({currentKey: ''})
+    this.onSelectVirtualKey(key)
+  }
+
+  render() {
+    const {currentKey, inputValue} = this.state
+    return (
+      <div className="App">
+        <Keyboard
+          currentKey={currentKey}
+          onKeyDown={this.handleKeyDown}
+          onKeyUp={this.handleKeyUp}
+          onClickKey={this.handleClickKey}
+          feedbackForCurrentKey={this.feedbackForVirtualKey}
+        />
+        <input id="app_input" type="text" value={inputValue} readOnly/>
+      </div>
+    )
+  }
 }
 
-export default App;
+export default App
