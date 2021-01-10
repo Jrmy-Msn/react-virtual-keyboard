@@ -26,7 +26,7 @@ Un clavier virtuel sous forme de composant ReactJS :
 
 ```js
 propTypes = {
-    layout: PropTypes.string, // keyboard layout
+  layout: PropTypes.arrayOf(PropTypes.string), // keyboard layout
     theme: PropTypes.string, // keyboard color theme
     currentKey: PropTypes.string, // if not empty string, current virtual key selected
     onKeyUp: PropTypes.func, // (KeyboardEvent) => void : keyup physical keyboard event handler
