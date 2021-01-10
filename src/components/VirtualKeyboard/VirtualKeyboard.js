@@ -17,13 +17,7 @@ export const KEYBOARD_THEME = {
   LIGHT: 'light'
 }
 
-export const KEYBOARD_LAYOUT = {
-  AZERTY: 'azerty',
-  QWERTY: 'qwerty',
-  ALPHABET: 'alphabet',
-}
-
-const KEYBOARD = {
+const KEYBOARD_LAYOUT = {
   AZERTY: ['AZERTYUIOP', 'QSDFGHJKLM', 'WXCVBN'],
   QWERTY: ['QWERTYUIOP', 'ASDFGHJKL', 'ZXCVBNM'],
   ALPHABET: ['ABCDEFGHIJ', 'KLMNOPQRST', 'UVWXYZ']
@@ -38,7 +32,7 @@ function nextInArray(value, array) {
 
 class VirtualKeyboard extends Component {
   static propTypes = {
-    layout: PropTypes.string, // keyboard layout
+    layout: PropTypes.arrayOf(PropTypes.string), // keyboard layout
     theme: PropTypes.string, // keyboard color theme
     currentKey: PropTypes.string, // if not empty string, current virtual key selected
     onKeyUp: PropTypes.func, // (KeyboardEvent) => void : keyup physical keyboard event handler
@@ -74,8 +68,7 @@ class VirtualKeyboard extends Component {
 
   detectKeyboardType() {
     const {layout} = this.state
-    const key = Object.keys(KEYBOARD_LAYOUT).find(k => KEYBOARD_LAYOUT[k] === layout)
-    return KEYBOARD[key] || VirtualKeyboard.defaultProps.layout
+    return layout || VirtualKeyboard.defaultProps.layout
   }
 
   // arrow func for binding this
