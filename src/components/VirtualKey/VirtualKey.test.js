@@ -15,11 +15,19 @@ it('should add the "feedback" prop CSS class', () => {
   expect(screen.getByRole('button')).toHaveClass('pressed')
 })
 
-it('should call "onClick" prop after click with "value" prop as argument', () => {
+it('should call "onClick" prop, after click, with "value" prop as argument', () => {
   const onClick = jest.fn()
   render(<VirtualKey value="M" onClick={onClick}/>)
   fireEvent.click(screen.getByRole('button'))
   expect(onClick).toHaveBeenCalledTimes(1)
   expect(onClick).toHaveBeenCalledWith("M")
+})
+
+it('should call "onMouseOver" prop, when mouse over, with "value" prop as argument', () => {
+  const onMouseOver = jest.fn()
+  render(<VirtualKey value="M" onMouseOver={onMouseOver}/>)
+  fireEvent.mouseOver(screen.getByRole('button'))
+  expect(onMouseOver).toHaveBeenCalledTimes(1)
+  expect(onMouseOver).toHaveBeenCalledWith("M")
 })
 

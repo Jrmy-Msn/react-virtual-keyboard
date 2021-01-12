@@ -5,13 +5,14 @@ import './VirtualKey.css'
 
 const TAG = '[VirtualKey]'
 
-const VirtualKey = ({value, feedback, onClick}) => {
+const VirtualKey = ({value, feedback, onClick, onMouseOver}) => {
   return (
     <div
       role="button"
       aria-roledescription="Touche de clavier virtuel"
       aria-label={`Lettre ${value}`}
       className={`VirtualKey ${feedback}`}
+      onMouseOver={() => onMouseOver(value)}
       onClick={() => onClick(value)}>{value}</div>
   )
 }
@@ -19,11 +20,13 @@ const VirtualKey = ({value, feedback, onClick}) => {
 VirtualKey.propTypes = {
   value: PropTypes.string.isRequired,
   feedback: PropTypes.string,
-  onClick: PropTypes.func.isRequired
+  onClick: PropTypes.func,
+  onMouseOver: PropTypes.func,
 }
 
 VirtualKey.defaultProps = {
   onClick: () => void undefined,
+  onMouseOver: () => void undefined,
   feedback: '',
 }
 
