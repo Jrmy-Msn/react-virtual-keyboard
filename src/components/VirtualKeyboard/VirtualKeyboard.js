@@ -38,6 +38,7 @@ class VirtualKeyboard extends Component {
     onKeyUp: PropTypes.func, // (KeyboardEvent) => void : keyup physical keyboard event handler
     onKeyDown: PropTypes.func, // (KeyboardEvent) => void : keydown physical keyboard event handler
     onClickKey: PropTypes.func, // (string) => void : mouse click on virtual key event handler
+    onMouseOverForKey: PropTypes.func, // (string) => void : mouse over on virtual key event handler
     feedbackForCurrentKey: PropTypes.func, // (string) =>  string : define a CSS classname
   }
 
@@ -47,6 +48,7 @@ class VirtualKeyboard extends Component {
     onKeyDown: (ev) => log('onKeyDown', 'Please provide a behavior', `[DOWN key "${ev.key.toUpperCase()}"]`),
     onKeyUp: (ev) => log('onKeyUp', 'Please provide a behavior', `[UP key "${ev.key.toUpperCase()}"]`),
     onClickForKey: (vKey) => log('onClickForKey', 'Please provide a behavior', `[CLICK key "${vKey.toUpperCase()}"]`),
+    onMouseOverForKey: (vKey) => log('onMouseOverForKey', 'Please provide a behavior', `[MOUSE OVER key "${vKey.toUpperCase()}"]`),
     feedbackForKey: '',
     feedbackForCurrentKey: () => void undefined
   }
@@ -109,7 +111,7 @@ class VirtualKeyboard extends Component {
 
   render() {
     const {theme} = this.state
-    const {feedbackForCurrentKey, onClickForKey} = this.props
+    const {feedbackForCurrentKey, onClickForKey, onMouseOverForKey} = this.props
     return (
       <div
         role="widget"
@@ -141,6 +143,7 @@ class VirtualKeyboard extends Component {
                       key={vKey}
                       value={vKey}
                       onClick={onClickForKey}
+                      onMouseOver={onMouseOverForKey}
                       feedback={feedbackForCurrentKey(vKey)}/>
                   ))
                 }
