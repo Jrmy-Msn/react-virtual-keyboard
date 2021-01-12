@@ -31,3 +31,11 @@ it('should call "onMouseOver" prop, when mouse over, with "value" prop as argume
   expect(onMouseOver).toHaveBeenCalledWith("M")
 })
 
+it('should call "onMouseOut" prop, when mouse over, with "value" prop as argument', () => {
+  const onMouseOut = jest.fn()
+  render(<VirtualKey value="M" onMouseOut={onMouseOut}/>)
+  fireEvent.mouseOut(screen.getByRole('button'))
+  expect(onMouseOut).toHaveBeenCalledTimes(1)
+  expect(onMouseOut).toHaveBeenCalledWith("M")
+})
+
