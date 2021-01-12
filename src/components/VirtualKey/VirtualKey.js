@@ -10,7 +10,7 @@ const VirtualKey = ({value, feedback, onClick, onMouseOver, onMouseOut}) => {
     <div
       role="button"
       aria-roledescription="Touche de clavier virtuel"
-      aria-label={`Lettre ${value}`}
+      aria-label={`Lettre ${typeof value === 'string' ? value : ''}`}
       className={`VirtualKey ${feedback}`}
       onMouseOut={() => onMouseOut(value)}
       onMouseOver={() => onMouseOver(value)}
@@ -19,7 +19,7 @@ const VirtualKey = ({value, feedback, onClick, onMouseOver, onMouseOut}) => {
 }
 
 VirtualKey.propTypes = {
-  value: PropTypes.string.isRequired,
+  value: PropTypes.any.isRequired,
   feedback: PropTypes.string,
   onClick: PropTypes.func,
   onMouseOver: PropTypes.func,
