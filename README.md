@@ -31,7 +31,8 @@ propTypes = {
     currentKey: PropTypes.string, // if not empty string, current virtual key selected
     onKeyUp: PropTypes.func, // (KeyboardEvent) => void : keyup physical keyboard event handler
     onKeyDown: PropTypes.func, // (KeyboardEvent) => void : keydown physical keyboard event handler
-    onClickKey: PropTypes.func, // (string) => void : mouse click on virtual key event handler
+    onClickForKey: PropTypes.func, // (string) => void : mouse click on virtual key event handler
+    onMouseOverForKey: PropTypes.func, // (string) => void : mouse over on virtual key event handler
     feedbackForCurrentKey: PropTypes.func.isRequired, // (string) =>  string : define a CSS classname
   }
 ```
