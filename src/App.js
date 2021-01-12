@@ -33,6 +33,11 @@ class App extends Component {
   }
 
   // arrow func for binding this
+  handleMouseOutForKey = () => {
+    this.setState({currentKey: ''})
+  }
+
+  // arrow func for binding this
   handleKeyDown = (ev) => {
     const key = ev.key && ev.key.toUpperCase()
     this.setState({currentKey: key || ''})
@@ -55,6 +60,7 @@ class App extends Component {
           onKeyUp={this.handleKeyUp}
           onClickForKey={this.handleClickForKey}
           onMouseOverForKey={this.handleMouseOverForKey}
+          onMouseOutForKey={this.handleMouseOutForKey}
           feedbackForCurrentKey={this.feedbackForVirtualKey}
         />
         <input id="app_input" type="text" value={inputValue} readOnly/>
