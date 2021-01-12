@@ -90,7 +90,6 @@ class VirtualKeyboard extends Component {
 
   // arrow func for binding this
   onKeyUp = (ev) => {
-    const {currentKey} = this.state
     // default behavior
     this.setState({currentKey: ''})
     // custom behavior
@@ -116,7 +115,6 @@ class VirtualKeyboard extends Component {
     const {feedbackForCurrentKey, onClickForKey, onMouseOverForKey, onMouseOutForKey} = this.props
     return (
       <div
-        role="widget"
         aria-label="Clavier virtuel"
         aria-owns=".VirtualKey"
         className={`VirtualKeyboard`}

@@ -2,7 +2,6 @@ import React from 'react'
 import {cleanup, fireEvent, render, screen} from '@testing-library/react'
 
 import VirtualKeyboard from "./VirtualKeyboard"
-import VirtualKey from "../VirtualKey/VirtualKey"
 
 afterEach(cleanup)
 
@@ -28,7 +27,7 @@ it('should <VirtualKey /> component with "currentKey" prop as "value" prop have 
 it('should call "onKeyDown" prop after start pressed a physical key', () => {
   const onKeyDown = jest.fn()
   render(<VirtualKeyboard onKeyDown={onKeyDown}/>)
-  fireEvent.keyDown(screen.getByRole('widget', {name: 'Clavier virtuel'}))
+  fireEvent.keyDown(screen.getByLabelText('Clavier virtuel'))
   expect(onKeyDown).toHaveBeenCalledTimes(1)
 })
 
@@ -36,7 +35,7 @@ it('should call "onKeyUp" prop after finish pressed a physical key', () => {
   const onKeyUp = jest.fn()
   render(<VirtualKeyboard onKeyUp={onKeyUp}/>)
 
-  fireEvent.keyUp(screen.getByRole('widget', {name: 'Clavier virtuel'}))
+  fireEvent.keyUp(screen.getByLabelText('Clavier virtuel'))
   expect(onKeyUp).toHaveBeenCalledTimes(1)
 })
 
