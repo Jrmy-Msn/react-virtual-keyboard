@@ -38,7 +38,7 @@ class VirtualKeyboard extends Component {
     onKeyUp: PropTypes.func, // (KeyboardEvent) => void : keyup physical keyboard event handler
     onKeyDown: PropTypes.func, // (KeyboardEvent) => void : keydown physical keyboard event handler
     onClickKey: PropTypes.func, // (string) => void : mouse click on virtual key event handler
-    feedbackForCurrentKey: PropTypes.func.isRequired, // (string) =>  string : define a CSS classname
+    feedbackForCurrentKey: PropTypes.func, // (string) =>  string : define a CSS classname
   }
 
   static defaultProps = {
@@ -47,7 +47,8 @@ class VirtualKeyboard extends Component {
     onKeyDown: (ev) => log('onKeyDown', 'Please provide a behavior', `[DOWN key "${ev.key.toUpperCase()}"]`),
     onKeyUp: (ev) => log('onKeyUp', 'Please provide a behavior', `[UP key "${ev.key.toUpperCase()}"]`),
     onClickForKey: (vKey) => log('onClickForKey', 'Please provide a behavior', `[CLICK key "${vKey.toUpperCase()}"]`),
-    feedbackForKey: ''
+    feedbackForKey: '',
+    feedbackForCurrentKey: () => void undefined
   }
 
   state = {
@@ -57,13 +58,13 @@ class VirtualKeyboard extends Component {
   }
 
   componentDidMount() {
-    window.addEventListener('keydown', this.onKeyDown)
-    window.addEventListener('keyup', this.onKeyUp)
+    document.body.addEventListener('keydown', this.onKeyDown)
+    document.body.addEventListener('keyup', this.onKeyUp)
   }
 
   componentWillUnmount() {
-    window.removeEventListener('keydown', this.onKeyDown)
-    window.removeEventListener('keyup', this.onKeyUp)
+    document.body.removeEventListener('keydown', this.onKeyDown)
+    document.body.removeEventListener('keyup', this.onKeyUp)
   }
 
   detectKeyboardType() {
@@ -89,7 +90,7 @@ class VirtualKeyboard extends Component {
     // default behavior
     this.setState({currentKey: ''})
     // custom behavior
-    if (currentKey) this.props.onKeyUp(ev)
+    this.props.onKeyUp(ev)
   }
 
   // arrow func for binding this
@@ -110,10 +111,25 @@ class VirtualKeyboard extends Component {
     const {theme} = this.state
     const {feedbackForCurrentKey, onClickForKey} = this.props
     return (
-      <div className={`VirtualKeyboard`} theme={theme}>
+      <div
+        role="widget"
+        aria-label="Clavier virtuel"
+        aria-owns=".VirtualKey"
+        className={`VirtualKeyboard`}
+        theme={theme}>
         <div className="virtual-keyboard-action">
-          <KeyboardIcon title="Changer la disposition du clavier" className={`la-lg`} onClick={this.switchType} />
-          <PaletteIcon title="Changer la couleur du clavier" className={`la-lg`} onClick={this.switchTheme} />
+          <KeyboardIcon
+            aria-hidden="false"
+            role="button"
+            aria-label="Changer la disposition du clavier"
+            className={`la-lg`}
+            onClick={this.switchType} />
+          <PaletteIcon
+            aria-hidden="false"
+            role="button"
+            aria-label="Changer la couleur du clavier"
+            className={`la-lg`}
+            onClick={this.switchTheme} />
         </div>
         <div className={`virtual-keyboard-letters`}>
           {

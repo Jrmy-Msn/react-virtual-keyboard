@@ -7,18 +7,24 @@ const TAG = '[VirtualKey]'
 
 const VirtualKey = ({value, feedback, onClick}) => {
   return (
-    <div className={`VirtualKey ${feedback}`} onClick={() => onClick(value)}><b>{value}</b></div>
+    <div
+      role="button"
+      aria-roledescription="Touche de clavier virtuel"
+      aria-label={`Lettre ${value}`}
+      className={`VirtualKey ${feedback}`}
+      onClick={() => onClick(value)}>{value}</div>
   )
 }
 
 VirtualKey.propTypes = {
   value: PropTypes.string.isRequired,
-  feedback: PropTypes.string.isRequired,
-  onClick: PropTypes.func
+  feedback: PropTypes.string,
+  onClick: PropTypes.func.isRequired
 }
 
 VirtualKey.defaultProps = {
-  onClick: () => void undefined
+  onClick: () => void undefined,
+  feedback: '',
 }
 
 
