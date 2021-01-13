@@ -1,49 +1,75 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import {cleanup, fireEvent, render, screen} from '@testing-library/react'
+import {shallow} from 'enzyme'
 
 import VirtualKey from "../VirtualKey/VirtualKey"
 
-afterEach(cleanup)
 
-it('should display "value" prop', () => {
-  render(<VirtualKey value="J"/>)
-  expect(screen.getByRole('button')).not.toBeNull()
+describe('VirtualKey Component Render', () => {
+  it('should render <VirtualKey />', () => {
+    let wrapper = shallow(<VirtualKey value="J"/>)
+    expect(wrapper).not.toBeNull()
+  })
+
+  it('should display "value" prop', () => {
+    let wrapper = shallow(<VirtualKey value="J"/>)
+    expect(wrapper.text()).toEqual('J')
+
+    const child = (<span>Toto</span>)
+    wrapper = shallow(<VirtualKey value={child}/>)
+    expect(wrapper.text()).toEqual('Toto')
+  })
+
+  it('should add the "feedback" prop CSS class', () => {
+    const wrapper = shallow(<VirtualKey feedback="pressed" value="E"/>)
+    expect(wrapper.hasClass('pressed')).toBe(true)
+  })
+
+  it('should call "onClick" prop, after click, with "value" prop as argument', () => {
+    const onClick = jest.fn()
+    const wrapper = shallow(<VirtualKey value="M" onClick={onClick}/>)
+    wrapper.simulate('click')
+    expect(onClick).toHaveBeenCalledTimes(1)
+    expect(onClick).toHaveBeenCalledWith("M")
+  })
+
+  it('should call "onMouseOver" prop, when mouse over, with "value" prop as argument', () => {
+    const onMouseOver = jest.fn()
+    const wrapper = shallow(<VirtualKey value="M" onMouseOver={onMouseOver}/>)
+    wrapper.simulate('mouseover')
+    expect(onMouseOver).toHaveBeenCalledTimes(1)
+    expect(onMouseOver).toHaveBeenCalledWith("M")
+  })
+
+  it('should call "onMouseOut" prop, when mouse over, with "value" prop as argument', () => {
+    const onMouseOut = jest.fn()
+    const wrapper = shallow(<VirtualKey value="M" onMouseOut={onMouseOut}/>)
+    wrapper.simulate('mouseOut')
+    expect(onMouseOut).toHaveBeenCalledTimes(1)
+    expect(onMouseOut).toHaveBeenCalledWith("M")
+  })
+
+  it('renders correctly', () => {
+    const tree = renderer
+      .create(<VirtualKey value="M"/>)
+      .toJSON();
+    expect(tree).toMatchSnapshot()
+  })
 })
 
-it('should add the "feedback" prop CSS class', () => {
-  let {container} = render(<VirtualKey feedback="pressed" value="E"/>)
-  expect(screen.getByRole('button')).toHaveClass('pressed')
-})
+describe('VirtualKey Default prop', () => {
+  it('should have prop\'s functions return nothing (void)', () => {
+    const onClick = jest.spyOn(VirtualKey.defaultProps, 'onClick')
+    const onMouseOut = jest.spyOn(VirtualKey.defaultProps, 'onMouseOut')
+    const onMouseOver = jest.spyOn(VirtualKey.defaultProps, 'onMouseOver')
 
-it('should call "onClick" prop, after click, with "value" prop as argument', () => {
-  const onClick = jest.fn()
-  render(<VirtualKey value="M" onClick={onClick}/>)
-  fireEvent.click(screen.getByRole('button'))
-  expect(onClick).toHaveBeenCalledTimes(1)
-  expect(onClick).toHaveBeenCalledWith("M")
-})
+    onClick()
+    onMouseOut()
+    onMouseOver()
 
-it('should call "onMouseOver" prop, when mouse over, with "value" prop as argument', () => {
-  const onMouseOver = jest.fn()
-  render(<VirtualKey value="M" onMouseOver={onMouseOver}/>)
-  fireEvent.mouseOver(screen.getByRole('button'))
-  expect(onMouseOver).toHaveBeenCalledTimes(1)
-  expect(onMouseOver).toHaveBeenCalledWith("M")
-})
-
-it('should call "onMouseOut" prop, when mouse over, with "value" prop as argument', () => {
-  const onMouseOut = jest.fn()
-  render(<VirtualKey value="M" onMouseOut={onMouseOut}/>)
-  fireEvent.mouseOut(screen.getByRole('button'))
-  expect(onMouseOut).toHaveBeenCalledTimes(1)
-  expect(onMouseOut).toHaveBeenCalledWith("M")
-})
-
-it('renders correctly', () => {
-  const tree = renderer
-    .create(<VirtualKey value="M"/>)
-    .toJSON();
-  expect(tree).toMatchSnapshot()
+    expect(onClick).toHaveReturnedWith(void undefined)
+    expect(onMouseOut).toHaveReturnedWith(void undefined)
+    expect(onMouseOver).toHaveReturnedWith(void undefined)
+  })
 })
 

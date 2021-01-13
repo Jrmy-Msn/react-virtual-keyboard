@@ -79,10 +79,10 @@ class VirtualKeyboard extends Component {
   // arrow func for binding this
   onKeyDown = (ev) => {
     const keyboardLayout = this.detectKeyboardType().join('')
-    const key = ev.key &&  ev.key.toUpperCase()
-    if (keyboardLayout.includes(key)) {
+    const key = ev.key ? ev.key.toUpperCase() : null
+    if (key && keyboardLayout.includes(key)) {
       // default behavior
-      this.setState({currentKey: key || ''})
+      this.setState({currentKey: key})
       // custom behavior
       this.props.onKeyDown(ev)
     }
