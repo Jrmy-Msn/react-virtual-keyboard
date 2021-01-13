@@ -1,4 +1,5 @@
 import React from 'react'
+import renderer from 'react-test-renderer'
 import {cleanup, fireEvent, render, screen} from '@testing-library/react'
 
 import VirtualKey from "../VirtualKey/VirtualKey"
@@ -37,5 +38,12 @@ it('should call "onMouseOut" prop, when mouse over, with "value" prop as argumen
   fireEvent.mouseOut(screen.getByRole('button'))
   expect(onMouseOut).toHaveBeenCalledTimes(1)
   expect(onMouseOut).toHaveBeenCalledWith("M")
+})
+
+it('renders correctly', () => {
+  const tree = renderer
+    .create(<VirtualKey value="M"/>)
+    .toJSON();
+  expect(tree).toMatchSnapshot()
 })
 

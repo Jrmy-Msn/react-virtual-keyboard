@@ -1,7 +1,9 @@
 import React from 'react'
+import renderer from 'react-test-renderer'
 import {cleanup, fireEvent, render, screen} from '@testing-library/react'
 
 import VirtualKeyboard from "./VirtualKeyboard"
+import VirtualKey from "../VirtualKey/VirtualKey";
 
 afterEach(cleanup)
 
@@ -47,3 +49,9 @@ it('should call "feedbackForCurrentKey" prop for each <VirtualKey /> component',
   expect(feedbackForCurrentKey).toHaveBeenCalledTimes(aKeys.length)
 })
 
+it('renders correctly', () => {
+  const tree = renderer
+    .create(<VirtualKeyboard />)
+    .toJSON();
+  expect(tree).toMatchSnapshot()
+})

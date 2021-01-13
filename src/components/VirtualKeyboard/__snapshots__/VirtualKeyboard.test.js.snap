@@ -1,0 +1,331 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  aria-label="Clavier virtuel"
+  aria-owns=".VirtualKey"
+  className="VirtualKeyboard"
+  theme="dark"
+>
+  <div
+    className="virtual-keyboard-action"
+  >
+    <i
+      aria-hidden="false"
+      aria-label="Changer la disposition du clavier"
+      className="la la-keyboard la-lg"
+      onClick={[Function]}
+      role="button"
+    />
+    <i
+      aria-hidden="false"
+      aria-label="Changer la couleur du clavier"
+      className="la la-palette la-lg"
+      onClick={[Function]}
+      role="button"
+    />
+  </div>
+  <div
+    className="virtual-keyboard-letters"
+  >
+    <div
+      className="virtual-keyboard-row"
+    >
+      <div
+        aria-label="Lettre A"
+        aria-roledescription="Touche de clavier virtuel"
+        className="VirtualKey "
+        onClick={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        role="button"
+      >
+        A
+      </div>
+      <div
+        aria-label="Lettre B"
+        aria-roledescription="Touche de clavier virtuel"
+        className="VirtualKey "
+        onClick={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        role="button"
+      >
+        B
+      </div>
+      <div
+        aria-label="Lettre C"
+        aria-roledescription="Touche de clavier virtuel"
+        className="VirtualKey "
+        onClick={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        role="button"
+      >
+        C
+      </div>
+      <div
+        aria-label="Lettre D"
+        aria-roledescription="Touche de clavier virtuel"
+        className="VirtualKey "
+        onClick={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        role="button"
+      >
+        D
+      </div>
+      <div
+        aria-label="Lettre E"
+        aria-roledescription="Touche de clavier virtuel"
+        className="VirtualKey "
+        onClick={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        role="button"
+      >
+        E
+      </div>
+      <div
+        aria-label="Lettre F"
+        aria-roledescription="Touche de clavier virtuel"
+        className="VirtualKey "
+        onClick={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        role="button"
+      >
+        F
+      </div>
+      <div
+        aria-label="Lettre G"
+        aria-roledescription="Touche de clavier virtuel"
+        className="VirtualKey "
+        onClick={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        role="button"
+      >
+        G
+      </div>
+      <div
+        aria-label="Lettre H"
+        aria-roledescription="Touche de clavier virtuel"
+        className="VirtualKey "
+        onClick={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        role="button"
+      >
+        H
+      </div>
+      <div
+        aria-label="Lettre I"
+        aria-roledescription="Touche de clavier virtuel"
+        className="VirtualKey "
+        onClick={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        role="button"
+      >
+        I
+      </div>
+      <div
+        aria-label="Lettre J"
+        aria-roledescription="Touche de clavier virtuel"
+        className="VirtualKey "
+        onClick={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        role="button"
+      >
+        J
+      </div>
+    </div>
+    <div
+      className="virtual-keyboard-row"
+    >
+      <div
+        aria-label="Lettre K"
+        aria-roledescription="Touche de clavier virtuel"
+        className="VirtualKey "
+        onClick={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        role="button"
+      >
+        K
+      </div>
+      <div
+        aria-label="Lettre L"
+        aria-roledescription="Touche de clavier virtuel"
+        className="VirtualKey "
+        onClick={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        role="button"
+      >
+        L
+      </div>
+      <div
+        aria-label="Lettre M"
+        aria-roledescription="Touche de clavier virtuel"
+        className="VirtualKey "
+        onClick={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        role="button"
+      >
+        M
+      </div>
+      <div
+        aria-label="Lettre N"
+        aria-roledescription="Touche de clavier virtuel"
+        className="VirtualKey "
+        onClick={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        role="button"
+      >
+        N
+      </div>
+      <div
+        aria-label="Lettre O"
+        aria-roledescription="Touche de clavier virtuel"
+        className="VirtualKey "
+        onClick={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        role="button"
+      >
+        O
+      </div>
+      <div
+        aria-label="Lettre P"
+        aria-roledescription="Touche de clavier virtuel"
+        className="VirtualKey "
+        onClick={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        role="button"
+      >
+        P
+      </div>
+      <div
+        aria-label="Lettre Q"
+        aria-roledescription="Touche de clavier virtuel"
+        className="VirtualKey "
+        onClick={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        role="button"
+      >
+        Q
+      </div>
+      <div
+        aria-label="Lettre R"
+        aria-roledescription="Touche de clavier virtuel"
+        className="VirtualKey "
+        onClick={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        role="button"
+      >
+        R
+      </div>
+      <div
+        aria-label="Lettre S"
+        aria-roledescription="Touche de clavier virtuel"
+        className="VirtualKey "
+        onClick={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        role="button"
+      >
+        S
+      </div>
+      <div
+        aria-label="Lettre T"
+        aria-roledescription="Touche de clavier virtuel"
+        className="VirtualKey "
+        onClick={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        role="button"
+      >
+        T
+      </div>
+    </div>
+    <div
+      className="virtual-keyboard-row"
+    >
+      <div
+        aria-label="Lettre U"
+        aria-roledescription="Touche de clavier virtuel"
+        className="VirtualKey "
+        onClick={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        role="button"
+      >
+        U
+      </div>
+      <div
+        aria-label="Lettre V"
+        aria-roledescription="Touche de clavier virtuel"
+        className="VirtualKey "
+        onClick={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        role="button"
+      >
+        V
+      </div>
+      <div
+        aria-label="Lettre W"
+        aria-roledescription="Touche de clavier virtuel"
+        className="VirtualKey "
+        onClick={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        role="button"
+      >
+        W
+      </div>
+      <div
+        aria-label="Lettre X"
+        aria-roledescription="Touche de clavier virtuel"
+        className="VirtualKey "
+        onClick={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        role="button"
+      >
+        X
+      </div>
+      <div
+        aria-label="Lettre Y"
+        aria-roledescription="Touche de clavier virtuel"
+        className="VirtualKey "
+        onClick={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        role="button"
+      >
+        Y
+      </div>
+      <div
+        aria-label="Lettre Z"
+        aria-roledescription="Touche de clavier virtuel"
+        className="VirtualKey "
+        onClick={[Function]}
+        onMouseOut={[Function]}
+        onMouseOver={[Function]}
+        role="button"
+      >
+        Z
+      </div>
+    </div>
+  </div>
+</div>
+`;

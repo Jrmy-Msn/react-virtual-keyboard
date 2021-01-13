@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  aria-label="Lettre M"
+  aria-roledescription="Touche de clavier virtuel"
+  className="VirtualKey "
+  onClick={[Function]}
+  onMouseOut={[Function]}
+  onMouseOver={[Function]}
+  role="button"
+>
+  M
+</div>
+`;
