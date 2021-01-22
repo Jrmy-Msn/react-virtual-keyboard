@@ -1,12 +1,23 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
-import {Box, Button, ButtonGroup, Container, createMuiTheme, ThemeProvider, withStyles} from "@material-ui/core"
+import {
+  Box,
+  Button,
+  ButtonGroup,
+  Container,
+  createMuiTheme,
+  Grid,
+  Paper,
+  ThemeProvider, useMediaQuery,
+  withStyles
+} from "@material-ui/core"
 import { KeyboardIcon } from 'react-line-awesome'
 
 import 'react-line-awesome/src/resources/line-awesome/css/line-awesome.min.css'
 import {usedStyle} from "./VirtualKeyboard.css.js";
 
 import VirtualKey from '../VirtualKey/VirtualKey'
+import ResponsiveButtonGroup from "./ResponsiveGroupButton"
 
 const TAG = '[VirtualKeyboard]'
 
@@ -101,45 +112,49 @@ class VirtualKeyboard extends Component {
     const {classes, isKeyActive, onClickForKey, onMouseOverForKey, onMouseOutForKey} = this.props
     return (
       <ThemeProvider theme={theme || createMuiTheme()}>
-        <Container
-          aria-label="Clavier virtuel"
-          aria-owns=".VirtualKey"
-          className={`VirtualKeyboard`}
-          maxWidth="sm">
-          <Box bgcolor={'primary.main'}>
-            <Button
-              aria-label="disposition"
-              className={`customizer`}
-              fullWidth={true}
-              disableElevation={true}
-              color={'secondary'}
-              classes={{root: classes.root}}
-              variant={'contained'}
-              onClick={this.switchType}
-              startIcon={<KeyboardIcon className={`la-lg`}/>}>Disposition</Button>
-              {
-                this.detectKeyboardType().map((letterRow, index, arr) => (
-                  <Box key={index} display="flex" justifyContent={'center'}>
-                    <ButtonGroup
-                      disableElevation={true}
-                      variant="contained"
-                      color="primary">
-                      {
-                        letterRow.split('').map(vKey => (
-                          <VirtualKey
-                            key={vKey}
-                            value={vKey}
-                            onClick={onClickForKey}
-                            onMouseOver={onMouseOverForKey}
-                            onMouseOut={onMouseOutForKey}
-                            active={isKeyActive(vKey)}/>
-                        ))
-                      }</ButtonGroup>
-                  </Box>
-                ))
-              }
-          </Box>
-        </Container>
+        <Box bgcolor={'primary.main'}>
+          <Grid container
+                aria-label="clavier"
+                aria-owns=".VirtualKey"
+                className={`VirtualKeyboard`}>
+            <Grid item xs={12}>
+              <Button
+                aria-label="disposition"
+                fullWidth={true}
+                size={'small'}
+                disableElevation={true}
+                color={'secondary'}
+                classes={{root: classes.root}}
+                variant={'contained'}
+                onClick={this.switchType}
+                startIcon={<KeyboardIcon className={`la-lg`}/>}>Disposition</Button>
+            </Grid>
+            {
+              this.detectKeyboardType().map((letterRow, index, arr) => (
+                <Grid container item xs={12}
+                      key={index}
+                      justify={'center'}>
+                  <ResponsiveButtonGroup
+                    disableElevation={true}
+                    size={'small'}
+                    variant="contained"
+                    color="primary">
+                    {
+                      letterRow.split('').map(vKey => (
+                        <VirtualKey
+                          key={vKey}
+                          value={vKey}
+                          onClick={onClickForKey}
+                          onMouseOver={onMouseOverForKey}
+                          onMouseOut={onMouseOutForKey}
+                          active={isKeyActive(vKey)}/>
+                      ))
+                    }</ResponsiveButtonGroup>
+                </Grid>
+              ))
+            }
+          </Grid>
+        </Box>
       </ThemeProvider>
     )
   }

@@ -2,49 +2,53 @@
 
 exports[`VirtualKeyboard Component Render renders correctly 1`] = `
 <div
-  aria-label="Clavier virtuel"
-  aria-owns=".VirtualKey"
-  className="MuiContainer-root VirtualKeyboard MuiContainer-maxWidthSm"
+  className="MuiBox-root MuiBox-root-2"
 >
   <div
-    className="MuiBox-root MuiBox-root-2"
+    aria-label="clavier"
+    aria-owns=".VirtualKey"
+    className="MuiGrid-root VirtualKeyboard MuiGrid-container"
   >
-    <button
-      aria-label="disposition"
-      className="MuiButtonBase-root MuiButton-root VirtualKeyboard-root-1 MuiButton-contained customizer MuiButton-containedSecondary MuiButton-disableElevation MuiButton-fullWidth"
-      disabled={false}
-      onBlur={[Function]}
-      onClick={[Function]}
-      onDragLeave={[Function]}
-      onFocus={[Function]}
-      onKeyDown={[Function]}
-      onKeyUp={[Function]}
-      onMouseDown={[Function]}
-      onMouseLeave={[Function]}
-      onMouseUp={[Function]}
-      onTouchEnd={[Function]}
-      onTouchMove={[Function]}
-      onTouchStart={[Function]}
-      tabIndex={0}
-      type="button"
+    <div
+      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12"
     >
-      <span
-        className="MuiButton-label"
+      <button
+        aria-label="disposition"
+        className="MuiButtonBase-root MuiButton-root VirtualKeyboard-root-1 MuiButton-contained MuiButton-containedSecondary MuiButton-containedSizeSmall MuiButton-sizeSmall MuiButton-disableElevation MuiButton-fullWidth"
+        disabled={false}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onDragLeave={[Function]}
+        onFocus={[Function]}
+        onKeyDown={[Function]}
+        onKeyUp={[Function]}
+        onMouseDown={[Function]}
+        onMouseLeave={[Function]}
+        onMouseUp={[Function]}
+        onTouchEnd={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        tabIndex={0}
+        type="button"
       >
         <span
-          className="MuiButton-startIcon MuiButton-iconSizeMedium"
+          className="MuiButton-label"
         >
-          <i
-            aria-hidden="true"
-            className="la la-keyboard la-lg"
-            role="presentation"
-          />
+          <span
+            className="MuiButton-startIcon MuiButton-iconSizeSmall"
+          >
+            <i
+              aria-hidden="true"
+              className="la la-keyboard la-lg"
+              role="presentation"
+            />
+          </span>
+          Disposition
         </span>
-        Disposition
-      </span>
-    </button>
+      </button>
+    </div>
     <div
-      className="MuiBox-root MuiBox-root-3"
+      className="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-justify-xs-center MuiGrid-grid-xs-12"
     >
       <div
         className="MuiButtonGroup-root MuiButtonGroup-disableElevation MuiButtonGroup-contained"
@@ -52,7 +56,7 @@ exports[`VirtualKeyboard Component Render renders correctly 1`] = `
       >
         <button
           aria-label="A"
-          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-6 MuiButton-containedPrimary MuiButton-disableElevation"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-3 MuiButton-contained VirtualKey MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedContained MuiButtonGroup-groupedContainedHorizontal MuiButtonGroup-groupedContainedPrimary makeStyles-active-4 makeStyles-active-5 MuiButton-containedPrimary MuiButton-disableElevation"
           disabled={false}
           feedback=""
           onBlur={[Function]}
@@ -80,7 +84,7 @@ exports[`VirtualKeyboard Component Render renders correctly 1`] = `
         </button>
         <button
           aria-label="B"
-          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-7 MuiButton-containedPrimary MuiButton-disableElevation"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-3 MuiButton-contained VirtualKey MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedContained MuiButtonGroup-groupedContainedHorizontal MuiButtonGroup-groupedContainedPrimary makeStyles-active-4 makeStyles-active-6 MuiButton-containedPrimary MuiButton-disableElevation"
           disabled={false}
           feedback=""
           onBlur={[Function]}
@@ -108,7 +112,7 @@ exports[`VirtualKeyboard Component Render renders correctly 1`] = `
         </button>
         <button
           aria-label="C"
-          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-8 MuiButton-containedPrimary MuiButton-disableElevation"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-3 MuiButton-contained VirtualKey MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedContained MuiButtonGroup-groupedContainedHorizontal MuiButtonGroup-groupedContainedPrimary makeStyles-active-4 makeStyles-active-7 MuiButton-containedPrimary MuiButton-disableElevation"
           disabled={false}
           feedback=""
           onBlur={[Function]}
@@ -136,7 +140,7 @@ exports[`VirtualKeyboard Component Render renders correctly 1`] = `
         </button>
         <button
           aria-label="D"
-          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-9 MuiButton-containedPrimary MuiButton-disableElevation"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-3 MuiButton-contained VirtualKey MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedContained MuiButtonGroup-groupedContainedHorizontal MuiButtonGroup-groupedContainedPrimary makeStyles-active-4 makeStyles-active-8 MuiButton-containedPrimary MuiButton-disableElevation"
           disabled={false}
           feedback=""
           onBlur={[Function]}
@@ -164,7 +168,7 @@ exports[`VirtualKeyboard Component Render renders correctly 1`] = `
         </button>
         <button
           aria-label="E"
-          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-10 MuiButton-containedPrimary MuiButton-disableElevation"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-3 MuiButton-contained VirtualKey MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedContained MuiButtonGroup-groupedContainedHorizontal MuiButtonGroup-groupedContainedPrimary makeStyles-active-4 makeStyles-active-9 MuiButton-containedPrimary MuiButton-disableElevation"
           disabled={false}
           feedback=""
           onBlur={[Function]}
@@ -192,7 +196,7 @@ exports[`VirtualKeyboard Component Render renders correctly 1`] = `
         </button>
         <button
           aria-label="F"
-          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-11 MuiButton-containedPrimary MuiButton-disableElevation"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-3 MuiButton-contained VirtualKey MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedContained MuiButtonGroup-groupedContainedHorizontal MuiButtonGroup-groupedContainedPrimary makeStyles-active-4 makeStyles-active-10 MuiButton-containedPrimary MuiButton-disableElevation"
           disabled={false}
           feedback=""
           onBlur={[Function]}
@@ -220,7 +224,7 @@ exports[`VirtualKeyboard Component Render renders correctly 1`] = `
         </button>
         <button
           aria-label="G"
-          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-12 MuiButton-containedPrimary MuiButton-disableElevation"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-3 MuiButton-contained VirtualKey MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedContained MuiButtonGroup-groupedContainedHorizontal MuiButtonGroup-groupedContainedPrimary makeStyles-active-4 makeStyles-active-11 MuiButton-containedPrimary MuiButton-disableElevation"
           disabled={false}
           feedback=""
           onBlur={[Function]}
@@ -248,7 +252,7 @@ exports[`VirtualKeyboard Component Render renders correctly 1`] = `
         </button>
         <button
           aria-label="H"
-          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-13 MuiButton-containedPrimary MuiButton-disableElevation"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-3 MuiButton-contained VirtualKey MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedContained MuiButtonGroup-groupedContainedHorizontal MuiButtonGroup-groupedContainedPrimary makeStyles-active-4 makeStyles-active-12 MuiButton-containedPrimary MuiButton-disableElevation"
           disabled={false}
           feedback=""
           onBlur={[Function]}
@@ -276,7 +280,7 @@ exports[`VirtualKeyboard Component Render renders correctly 1`] = `
         </button>
         <button
           aria-label="I"
-          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-14 MuiButton-containedPrimary MuiButton-disableElevation"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-3 MuiButton-contained VirtualKey MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedContained MuiButtonGroup-groupedContainedHorizontal MuiButtonGroup-groupedContainedPrimary makeStyles-active-4 makeStyles-active-13 MuiButton-containedPrimary MuiButton-disableElevation"
           disabled={false}
           feedback=""
           onBlur={[Function]}
@@ -304,7 +308,7 @@ exports[`VirtualKeyboard Component Render renders correctly 1`] = `
         </button>
         <button
           aria-label="J"
-          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-15 MuiButton-containedPrimary MuiButton-disableElevation"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-3 MuiButton-contained VirtualKey MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedContained MuiButtonGroup-groupedContainedHorizontal MuiButtonGroup-groupedContainedPrimary makeStyles-active-4 makeStyles-active-14 MuiButton-containedPrimary MuiButton-disableElevation"
           disabled={false}
           feedback=""
           onBlur={[Function]}
@@ -333,7 +337,7 @@ exports[`VirtualKeyboard Component Render renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="MuiBox-root MuiBox-root-16"
+      className="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-justify-xs-center MuiGrid-grid-xs-12"
     >
       <div
         className="MuiButtonGroup-root MuiButtonGroup-disableElevation MuiButtonGroup-contained"
@@ -341,7 +345,7 @@ exports[`VirtualKeyboard Component Render renders correctly 1`] = `
       >
         <button
           aria-label="K"
-          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-17 MuiButton-containedPrimary MuiButton-disableElevation"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-3 MuiButton-contained VirtualKey MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedContained MuiButtonGroup-groupedContainedHorizontal MuiButtonGroup-groupedContainedPrimary makeStyles-active-4 makeStyles-active-15 MuiButton-containedPrimary MuiButton-disableElevation"
           disabled={false}
           feedback=""
           onBlur={[Function]}
@@ -369,7 +373,7 @@ exports[`VirtualKeyboard Component Render renders correctly 1`] = `
         </button>
         <button
           aria-label="L"
-          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-18 MuiButton-containedPrimary MuiButton-disableElevation"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-3 MuiButton-contained VirtualKey MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedContained MuiButtonGroup-groupedContainedHorizontal MuiButtonGroup-groupedContainedPrimary makeStyles-active-4 makeStyles-active-16 MuiButton-containedPrimary MuiButton-disableElevation"
           disabled={false}
           feedback=""
           onBlur={[Function]}
@@ -397,7 +401,7 @@ exports[`VirtualKeyboard Component Render renders correctly 1`] = `
         </button>
         <button
           aria-label="M"
-          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-19 MuiButton-containedPrimary MuiButton-disableElevation"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-3 MuiButton-contained VirtualKey MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedContained MuiButtonGroup-groupedContainedHorizontal MuiButtonGroup-groupedContainedPrimary makeStyles-active-4 makeStyles-active-17 MuiButton-containedPrimary MuiButton-disableElevation"
           disabled={false}
           feedback=""
           onBlur={[Function]}
@@ -425,7 +429,7 @@ exports[`VirtualKeyboard Component Render renders correctly 1`] = `
         </button>
         <button
           aria-label="N"
-          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-20 MuiButton-containedPrimary MuiButton-disableElevation"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-3 MuiButton-contained VirtualKey MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedContained MuiButtonGroup-groupedContainedHorizontal MuiButtonGroup-groupedContainedPrimary makeStyles-active-4 makeStyles-active-18 MuiButton-containedPrimary MuiButton-disableElevation"
           disabled={false}
           feedback=""
           onBlur={[Function]}
@@ -453,7 +457,7 @@ exports[`VirtualKeyboard Component Render renders correctly 1`] = `
         </button>
         <button
           aria-label="O"
-          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-21 MuiButton-containedPrimary MuiButton-disableElevation"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-3 MuiButton-contained VirtualKey MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedContained MuiButtonGroup-groupedContainedHorizontal MuiButtonGroup-groupedContainedPrimary makeStyles-active-4 makeStyles-active-19 MuiButton-containedPrimary MuiButton-disableElevation"
           disabled={false}
           feedback=""
           onBlur={[Function]}
@@ -481,7 +485,7 @@ exports[`VirtualKeyboard Component Render renders correctly 1`] = `
         </button>
         <button
           aria-label="P"
-          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-22 MuiButton-containedPrimary MuiButton-disableElevation"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-3 MuiButton-contained VirtualKey MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedContained MuiButtonGroup-groupedContainedHorizontal MuiButtonGroup-groupedContainedPrimary makeStyles-active-4 makeStyles-active-20 MuiButton-containedPrimary MuiButton-disableElevation"
           disabled={false}
           feedback=""
           onBlur={[Function]}
@@ -509,7 +513,7 @@ exports[`VirtualKeyboard Component Render renders correctly 1`] = `
         </button>
         <button
           aria-label="Q"
-          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-23 MuiButton-containedPrimary MuiButton-disableElevation"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-3 MuiButton-contained VirtualKey MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedContained MuiButtonGroup-groupedContainedHorizontal MuiButtonGroup-groupedContainedPrimary makeStyles-active-4 makeStyles-active-21 MuiButton-containedPrimary MuiButton-disableElevation"
           disabled={false}
           feedback=""
           onBlur={[Function]}
@@ -537,7 +541,7 @@ exports[`VirtualKeyboard Component Render renders correctly 1`] = `
         </button>
         <button
           aria-label="R"
-          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-24 MuiButton-containedPrimary MuiButton-disableElevation"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-3 MuiButton-contained VirtualKey MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedContained MuiButtonGroup-groupedContainedHorizontal MuiButtonGroup-groupedContainedPrimary makeStyles-active-4 makeStyles-active-22 MuiButton-containedPrimary MuiButton-disableElevation"
           disabled={false}
           feedback=""
           onBlur={[Function]}
@@ -565,7 +569,7 @@ exports[`VirtualKeyboard Component Render renders correctly 1`] = `
         </button>
         <button
           aria-label="S"
-          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-25 MuiButton-containedPrimary MuiButton-disableElevation"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-3 MuiButton-contained VirtualKey MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedContained MuiButtonGroup-groupedContainedHorizontal MuiButtonGroup-groupedContainedPrimary makeStyles-active-4 makeStyles-active-23 MuiButton-containedPrimary MuiButton-disableElevation"
           disabled={false}
           feedback=""
           onBlur={[Function]}
@@ -593,7 +597,7 @@ exports[`VirtualKeyboard Component Render renders correctly 1`] = `
         </button>
         <button
           aria-label="T"
-          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-26 MuiButton-containedPrimary MuiButton-disableElevation"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-3 MuiButton-contained VirtualKey MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedContained MuiButtonGroup-groupedContainedHorizontal MuiButtonGroup-groupedContainedPrimary makeStyles-active-4 makeStyles-active-24 MuiButton-containedPrimary MuiButton-disableElevation"
           disabled={false}
           feedback=""
           onBlur={[Function]}
@@ -622,7 +626,7 @@ exports[`VirtualKeyboard Component Render renders correctly 1`] = `
       </div>
     </div>
     <div
-      className="MuiBox-root MuiBox-root-27"
+      className="MuiGrid-root MuiGrid-container MuiGrid-item MuiGrid-justify-xs-center MuiGrid-grid-xs-12"
     >
       <div
         className="MuiButtonGroup-root MuiButtonGroup-disableElevation MuiButtonGroup-contained"
@@ -630,7 +634,7 @@ exports[`VirtualKeyboard Component Render renders correctly 1`] = `
       >
         <button
           aria-label="U"
-          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-28 MuiButton-containedPrimary MuiButton-disableElevation"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-3 MuiButton-contained VirtualKey MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedContained MuiButtonGroup-groupedContainedHorizontal MuiButtonGroup-groupedContainedPrimary makeStyles-active-4 makeStyles-active-25 MuiButton-containedPrimary MuiButton-disableElevation"
           disabled={false}
           feedback=""
           onBlur={[Function]}
@@ -658,7 +662,7 @@ exports[`VirtualKeyboard Component Render renders correctly 1`] = `
         </button>
         <button
           aria-label="V"
-          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-29 MuiButton-containedPrimary MuiButton-disableElevation"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-3 MuiButton-contained VirtualKey MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedContained MuiButtonGroup-groupedContainedHorizontal MuiButtonGroup-groupedContainedPrimary makeStyles-active-4 makeStyles-active-26 MuiButton-containedPrimary MuiButton-disableElevation"
           disabled={false}
           feedback=""
           onBlur={[Function]}
@@ -686,7 +690,7 @@ exports[`VirtualKeyboard Component Render renders correctly 1`] = `
         </button>
         <button
           aria-label="W"
-          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-30 MuiButton-containedPrimary MuiButton-disableElevation"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-3 MuiButton-contained VirtualKey MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedContained MuiButtonGroup-groupedContainedHorizontal MuiButtonGroup-groupedContainedPrimary makeStyles-active-4 makeStyles-active-27 MuiButton-containedPrimary MuiButton-disableElevation"
           disabled={false}
           feedback=""
           onBlur={[Function]}
@@ -714,7 +718,7 @@ exports[`VirtualKeyboard Component Render renders correctly 1`] = `
         </button>
         <button
           aria-label="X"
-          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-31 MuiButton-containedPrimary MuiButton-disableElevation"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-3 MuiButton-contained VirtualKey MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedContained MuiButtonGroup-groupedContainedHorizontal MuiButtonGroup-groupedContainedPrimary makeStyles-active-4 makeStyles-active-28 MuiButton-containedPrimary MuiButton-disableElevation"
           disabled={false}
           feedback=""
           onBlur={[Function]}
@@ -742,7 +746,7 @@ exports[`VirtualKeyboard Component Render renders correctly 1`] = `
         </button>
         <button
           aria-label="Y"
-          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-32 MuiButton-containedPrimary MuiButton-disableElevation"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-3 MuiButton-contained VirtualKey MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedContained MuiButtonGroup-groupedContainedHorizontal MuiButtonGroup-groupedContainedPrimary makeStyles-active-4 makeStyles-active-29 MuiButton-containedPrimary MuiButton-disableElevation"
           disabled={false}
           feedback=""
           onBlur={[Function]}
@@ -770,7 +774,7 @@ exports[`VirtualKeyboard Component Render renders correctly 1`] = `
         </button>
         <button
           aria-label="Z"
-          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-33 MuiButton-containedPrimary MuiButton-disableElevation"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-3 MuiButton-contained VirtualKey MuiButtonGroup-grouped MuiButtonGroup-groupedHorizontal MuiButtonGroup-groupedContained MuiButtonGroup-groupedContainedHorizontal MuiButtonGroup-groupedContainedPrimary makeStyles-active-4 makeStyles-active-30 MuiButton-containedPrimary MuiButton-disableElevation"
           disabled={false}
           feedback=""
           onBlur={[Function]}

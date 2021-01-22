@@ -13,7 +13,7 @@ const VirtualKey = ({value, active, onClick, onMouseOver, onMouseOut, ...other})
       {...other}
       color={'primary'}
       variant={'contained'}
-      className={`VirtualKey ${classes.active}`}
+      className={`VirtualKey ${other.className} ${classes.active}`}
       aria-label={`${typeof value === 'string' ? value : ''}`}
       classes={{root: classes.root}}
       onMouseOut={() => onMouseOut(value)}

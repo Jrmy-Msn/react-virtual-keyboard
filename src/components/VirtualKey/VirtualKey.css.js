@@ -7,10 +7,8 @@ export const useStyles = makeStyles(theme => ({
     minWidth: 'inherit',
   },
   active({active}) {
-    return {
-      backgroundColor: active
-        ? theme.palette.primary.dark
-        : 'inherit'
-    }
+    return active ? {
+      backgroundColor: theme.palette.primary.dark
+    } : {}
   }
 }))

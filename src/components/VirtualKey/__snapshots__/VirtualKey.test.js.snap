@@ -3,7 +3,7 @@
 exports[`VirtualKey Component Render renders correctly 1`] = `
 <button
   aria-label="M"
-  className="MuiButtonBase-root MuiButton-root makeStyles-root-1 MuiButton-contained VirtualKey makeStyles-active-2 makeStyles-active-10 MuiButton-containedPrimary"
+  className="MuiButtonBase-root MuiButton-root makeStyles-root-1 MuiButton-contained VirtualKey undefined makeStyles-active-2 makeStyles-active-10 MuiButton-containedPrimary"
   disabled={false}
   feedback=""
   onBlur={[Function]}
