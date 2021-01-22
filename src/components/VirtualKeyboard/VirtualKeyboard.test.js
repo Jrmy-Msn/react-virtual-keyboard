@@ -1,11 +1,17 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import { shallow, mount } from 'enzyme'
+import {createShallow} from "@material-ui/core/test-utils"
 
 import VirtualKeyboard from "./VirtualKeyboard"
-import VirtualKey from "../VirtualKey/VirtualKey";
+import VirtualKey from "../VirtualKey/VirtualKey"
 
 describe('VirtualKeyboard Component Render', () => {
+  let shallow
+
+  beforeAll(() => {
+    shallow = createShallow({dive: true});
+  })
+
   it('should display 26 <VirtualKey /> component', () => {
     const wrapper = shallow(<VirtualKeyboard />)
     const aKeys = wrapper.find('VirtualKey')
@@ -22,26 +28,7 @@ describe('VirtualKeyboard Component Render', () => {
     expect(aKeys).toHaveLength(26)
   })
 
-  it('should <VirtualKey /> component with "currentKey" prop as "value" prop have a "feedback" prop', () => {
-    const feedbackForCurrentKey = jest.fn()
-    feedbackForCurrentKey.mockImplementation((p) => p === 'J' ? 'pressed' : '')
-    const wrapper = shallow(<VirtualKeyboard currentKey={'J'} feedbackForCurrentKey={feedbackForCurrentKey} />)
-    const vKey = wrapper
-      .find('VirtualKey')
-      .filterWhere(w => w.dive().hasClass('pressed'))
-    expect(vKey.dive().filter('.pressed')).toHaveLength(1)
-  })
-
-  it('should call "onKeyDown" prop after start pressed a physical key', () => {
-    const onKeyDown = jest.fn()
-    const wrapper = shallow(<VirtualKeyboard onKeyDown={onKeyDown}/>)
-    document.body.dispatchEvent(new KeyboardEvent('keydown', {key: 'j'}))
-    expect(onKeyDown).toHaveBeenCalledTimes(1)
-    document.body.dispatchEvent(new KeyboardEvent('keydown', {key: ''}))
-    expect(onKeyDown).toHaveBeenCalledTimes(1)
-  })
-
-  it('should call "onKeyUp" prop after finish pressed a physical key', () => {
+  it('should call "onKeyUp" prop after finish active a physical key', () => {
     const onKeyUp = jest.fn()
     const wrapper = shallow(<VirtualKeyboard onKeyUp={onKeyUp}/>)
     document.body.dispatchEvent(new KeyboardEvent('keyup', {key: 'j'}))
@@ -55,26 +42,12 @@ describe('VirtualKeyboard Component Render', () => {
     expect(onClickForKey).toHaveBeenCalledTimes(1)
   })
 
-  it('should call "onMouseOverForKey" prop when clicked on <VirtualKey />', () => {
-    const onMouseOverForKey = jest.fn()
-    const wrapper = shallow(<VirtualKeyboard onMouseOverForKey={onMouseOverForKey}/>)
-    wrapper.find('VirtualKey').first().simulate('mouseover')
-    expect(onMouseOverForKey).toHaveBeenCalledTimes(1)
-  })
-
-  it('should call "onMouseOutForKey" prop when clicked on <VirtualKey />', () => {
-    const onMouseOutForKey = jest.fn()
-    const wrapper = shallow(<VirtualKeyboard onMouseOutForKey={onMouseOutForKey}/>)
-    wrapper.find('VirtualKey').first().simulate('mouseout')
-    expect(onMouseOutForKey).toHaveBeenCalledTimes(1)
-  })
-
-  it('should call "feedbackForCurrentKey" prop for each <VirtualKey /> component', () => {
-    const feedbackForCurrentKey = jest.fn()
-    feedbackForCurrentKey.mockImplementation(() => 'pressed')
-    const wrapper = shallow(<VirtualKeyboard feedbackForCurrentKey={feedbackForCurrentKey}/>)
+  it('should call "isKeyActive" prop for each <VirtualKey /> component', () => {
+    const isKeyActive = jest.fn()
+    isKeyActive.mockImplementation(() => 'active')
+    const wrapper = shallow(<VirtualKeyboard isKeyActive={isKeyActive}/>)
     const aKeys = wrapper.find('VirtualKey')
-    expect(feedbackForCurrentKey).toHaveBeenCalledTimes(aKeys.length)
+    expect(isKeyActive).toHaveBeenCalledTimes(aKeys.length)
   })
 
 // it('should call "switchType" func', () => {
@@ -100,21 +73,5 @@ describe('VirtualKeyboard Component Render', () => {
       .create(<VirtualKeyboard />)
       .toJSON();
     expect(tree).toMatchSnapshot()
-  })
-})
-
-
-describe('VirtualKeyboard Default prop', () => {
-  it('should have prop\'s functions return nothing (void)', () => {
-    const onClickForKey = jest.spyOn(VirtualKeyboard.defaultProps, 'onClickForKey')
-    const onMouseOverForKey = jest.spyOn(VirtualKeyboard.defaultProps, 'onMouseOverForKey')
-    const onMouseOutForKey = jest.spyOn(VirtualKeyboard.defaultProps, 'onMouseOutForKey')
-    const consoleFunc = jest.spyOn(console, 'log')
-
-    onClickForKey('J')
-    onMouseOverForKey('R')
-    onMouseOutForKey('M')
-
-    expect(consoleFunc).toBeCalledTimes(3)
   })
 })

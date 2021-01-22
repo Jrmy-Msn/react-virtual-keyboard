@@ -21,8 +21,8 @@ describe('VirtualKey Component Render', () => {
   })
 
   it('should add the "feedback" prop CSS class', () => {
-    const wrapper = shallow(<VirtualKey feedback="pressed" value="E"/>)
-    expect(wrapper.hasClass('pressed')).toBe(true)
+    const wrapper = shallow(<VirtualKey active={true} value="E"/>)
+    expect(wrapper.hasClass(/-active/)).toBe(true)
   })
 
   it('should call "onClick" prop, after click, with "value" prop as argument', () => {

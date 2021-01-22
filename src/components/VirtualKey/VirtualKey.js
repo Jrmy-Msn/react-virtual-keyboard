@@ -1,20 +1,24 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import './VirtualKey.css'
+import {useStyles} from "./VirtualKey.css.js";
+import {Button} from "@material-ui/core";
 
 const TAG = '[VirtualKey]'
 
-const VirtualKey = ({value, feedback, onClick, onMouseOver, onMouseOut}) => {
+const VirtualKey = ({value, active, onClick, onMouseOver, onMouseOut, ...other}) => {
+  const classes = useStyles({active});
   return (
-    <div
-      role="button"
-      aria-roledescription="Touche de clavier virtuel"
-      aria-label={`Lettre ${typeof value === 'string' ? value : ''}`}
-      className={`VirtualKey ${feedback}`}
+    <Button
+      {...other}
+      color={'primary'}
+      variant={'contained'}
+      className={`VirtualKey ${classes.active}`}
+      aria-label={`${typeof value === 'string' ? value : ''}`}
+      classes={{root: classes.root}}
       onMouseOut={() => onMouseOut(value)}
       onMouseOver={() => onMouseOver(value)}
-      onClick={() => onClick(value)}>{value}</div>
+      onClick={() => onClick(value)}>{value}</Button>
   )
 }
 

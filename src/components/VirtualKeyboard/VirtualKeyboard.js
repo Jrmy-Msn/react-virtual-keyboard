@@ -1,20 +1,17 @@
 import React, {Component} from 'react'
 import PropTypes from 'prop-types'
-import { KeyboardIcon, PaletteIcon } from 'react-line-awesome'
+import {Box, Button, ButtonGroup, Container, createMuiTheme, ThemeProvider, withStyles} from "@material-ui/core"
+import { KeyboardIcon } from 'react-line-awesome'
 
 import 'react-line-awesome/src/resources/line-awesome/css/line-awesome.min.css'
-import './VirtualKeyboard.css'
+import {usedStyle} from "./VirtualKeyboard.css.js";
 
 import VirtualKey from '../VirtualKey/VirtualKey'
 
 const TAG = '[VirtualKeyboard]'
+
 function log(...args) {
   console.log(`%c${TAG} %c${args.join(' ')}`, `font:bold 1em sans-serif;color:${'#35a2bf'}`, '')
-}
-
-export const KEYBOARD_THEME = {
-  DARK: 'dark',
-  LIGHT: 'light'
 }
 
 const KEYBOARD_LAYOUT = {
@@ -33,32 +30,28 @@ function nextInArray(value, array) {
 class VirtualKeyboard extends Component {
   static propTypes = {
     layout: PropTypes.arrayOf(PropTypes.string), // keyboard layout
-    theme: PropTypes.string, // keyboard color theme
-    currentKey: PropTypes.string, // if not empty string, current virtual key selected
+    theme: PropTypes.object, // keyboard color theme
     onKeyUp: PropTypes.func, // (KeyboardEvent) => void : keyup physical keyboard event handler
     onKeyDown: PropTypes.func, // (KeyboardEvent) => void : keydown physical keyboard event handler
     onClickKey: PropTypes.func, // (string) => void : mouse click on virtual key event handler
     onMouseOverForKey: PropTypes.func, // (string) => void : mouse over on virtual key event handler
     onMouseOutForKey: PropTypes.func, // (string) => void : mouse out on virtual key event handler
-    feedbackForCurrentKey: PropTypes.func, // (string) =>  string : define a CSS classname
+    isKeyActive: PropTypes.func, // (string) =>  string : define a CSS classname
   }
 
   static defaultProps = {
-    theme: KEYBOARD_THEME.DARK,
     layout: KEYBOARD_LAYOUT.ALPHABET,
     onKeyDown: (ev) => log('onKeyDown', 'Please provide a behavior', `[DOWN key "${ev.key.toUpperCase()}"]`),
     onKeyUp: (ev) => log('onKeyUp', 'Please provide a behavior', `[UP key "${ev.key.toUpperCase()}"]`),
     onClickForKey: (vKey) => log('onClickForKey', 'Please provide a behavior', `[CLICK key "${vKey.toUpperCase()}"]`),
     onMouseOverForKey: (vKey) => log('onMouseOverForKey', 'Please provide a behavior', `[MOUSE OVER key "${vKey.toUpperCase()}"]`),
     onMouseOutForKey: (vKey) => log('onMouseOutForKey', 'Please provide a behavior', `[MOUSE OUT key "${vKey.toUpperCase()}"]`),
-    feedbackForKey: '',
-    feedbackForCurrentKey: () => void undefined
+    isKeyActive: () => void undefined
   }
 
   state = {
     theme: this.props.theme,
     layout: this.props.layout,
-    currentKey: ''
   }
 
   componentDidMount() {
@@ -81,8 +74,6 @@ class VirtualKeyboard extends Component {
     const keyboardLayout = this.detectKeyboardType().join('')
     const key = ev.key ? ev.key.toUpperCase() : null
     if (key && keyboardLayout.includes(key)) {
-      // default behavior
-      this.setState({currentKey: key})
       // custom behavior
       this.props.onKeyDown(ev)
     }
@@ -90,10 +81,12 @@ class VirtualKeyboard extends Component {
 
   // arrow func for binding this
   onKeyUp = (ev) => {
-    // default behavior
-    this.setState({currentKey: ''})
-    // custom behavior
-    this.props.onKeyUp(ev)
+    const keyboardLayout = this.detectKeyboardType().join('')
+    const key = ev.key ? ev.key.toUpperCase() : null
+    if (key && keyboardLayout.includes(key)) {
+      // custom behavior
+      this.props.onKeyUp(ev)
+    }
   }
 
   // arrow func for binding this
@@ -103,58 +96,53 @@ class VirtualKeyboard extends Component {
     this.setState({layout: next})
   }
 
-  // arrow func for binding this
-  switchTheme = () => {
-    const {theme} = this.state
-    const next = nextInArray(theme, KEYBOARD_THEME)
-    this.setState({theme: next})
-  }
-
   render() {
     const {theme} = this.state
-    const {feedbackForCurrentKey, onClickForKey, onMouseOverForKey, onMouseOutForKey} = this.props
+    const {classes, isKeyActive, onClickForKey, onMouseOverForKey, onMouseOutForKey} = this.props
     return (
-      <div
-        aria-label="Clavier virtuel"
-        aria-owns=".VirtualKey"
-        className={`VirtualKeyboard`}
-        theme={theme}>
-        <div className="virtual-keyboard-action">
-          <KeyboardIcon
-            aria-hidden="false"
-            role="button"
-            aria-label="Changer la disposition du clavier"
-            className={`la-lg`}
-            onClick={this.switchType} />
-          <PaletteIcon
-            aria-hidden="false"
-            role="button"
-            aria-label="Changer la couleur du clavier"
-            className={`la-lg`}
-            onClick={this.switchTheme} />
-        </div>
-        <div className={`virtual-keyboard-letters`}>
-          {
-            this.detectKeyboardType().map((letterRow, index) => (
-              <div key={index} className={`virtual-keyboard-row`}>
-                {
-                  letterRow.split('').map(vKey => (
-                    <VirtualKey
-                      key={vKey}
-                      value={vKey}
-                      onClick={onClickForKey}
-                      onMouseOver={onMouseOverForKey}
-                      onMouseOut={onMouseOutForKey}
-                      feedback={feedbackForCurrentKey(vKey)}/>
-                  ))
-                }
-              </div>
-            ))
-          }
-        </div>
-      </div>
+      <ThemeProvider theme={theme || createMuiTheme()}>
+        <Container
+          aria-label="Clavier virtuel"
+          aria-owns=".VirtualKey"
+          className={`VirtualKeyboard`}
+          maxWidth="sm">
+          <Box bgcolor={'primary.main'}>
+            <Button
+              aria-label="disposition"
+              className={`customizer`}
+              fullWidth={true}
+              disableElevation={true}
+              color={'secondary'}
+              classes={{root: classes.root}}
+              variant={'contained'}
+              onClick={this.switchType}
+              startIcon={<KeyboardIcon className={`la-lg`}/>}>Disposition</Button>
+              {
+                this.detectKeyboardType().map((letterRow, index, arr) => (
+                  <Box key={index} display="flex" justifyContent={'center'}>
+                    <ButtonGroup
+                      disableElevation={true}
+                      variant="contained"
+                      color="primary">
+                      {
+                        letterRow.split('').map(vKey => (
+                          <VirtualKey
+                            key={vKey}
+                            value={vKey}
+                            onClick={onClickForKey}
+                            onMouseOver={onMouseOverForKey}
+                            onMouseOut={onMouseOutForKey}
+                            active={isKeyActive(vKey)}/>
+                        ))
+                      }</ButtonGroup>
+                  </Box>
+                ))
+              }
+          </Box>
+        </Container>
+      </ThemeProvider>
     )
   }
 }
 
-export default VirtualKeyboard
+export default withStyles(usedStyle, { withTheme: true })(VirtualKeyboard)

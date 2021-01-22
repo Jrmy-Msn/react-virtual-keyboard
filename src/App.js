@@ -1,9 +1,8 @@
 import React, {Component} from 'react'
 
-import './App.css'
+import {THEME} from "./App.css.js";
 
 import Keyboard from './components/VirtualKeyboard/VirtualKeyboard'
-
 
 class App extends Component {
   state = {
@@ -17,9 +16,9 @@ class App extends Component {
   }
 
   // arrow func for binding this
-  feedbackForVirtualKey = (vKey) => {
+  isVirtualKeyActive = (vKey) => {
     const {currentKey} = this.state
-    return vKey === currentKey ? 'pressed' : ''
+    return vKey === currentKey
   }
 
   // arrow func for binding this
@@ -55,13 +54,14 @@ class App extends Component {
     return (
       <div className="App">
         <Keyboard
+          theme={THEME.light}
           currentKey={currentKey}
           onKeyDown={this.handleKeyDown}
           onKeyUp={this.handleKeyUp}
           onClickForKey={this.handleClickForKey}
           onMouseOverForKey={this.handleMouseOverForKey}
           onMouseOutForKey={this.handleMouseOutForKey}
-          feedbackForCurrentKey={this.feedbackForVirtualKey}
+          isKeyActive={this.isVirtualKeyActive}
         />
         <input id="app_input" type="text" value={inputValue} readOnly/>
       </div>

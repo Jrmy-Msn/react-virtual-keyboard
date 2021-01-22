@@ -4,326 +4,798 @@ exports[`VirtualKeyboard Component Render renders correctly 1`] = `
 <div
   aria-label="Clavier virtuel"
   aria-owns=".VirtualKey"
-  className="VirtualKeyboard"
-  theme="dark"
+  className="MuiContainer-root VirtualKeyboard MuiContainer-maxWidthSm"
 >
   <div
-    className="virtual-keyboard-action"
+    className="MuiBox-root MuiBox-root-2"
   >
-    <i
-      aria-hidden="false"
-      aria-label="Changer la disposition du clavier"
-      className="la la-keyboard la-lg"
+    <button
+      aria-label="disposition"
+      className="MuiButtonBase-root MuiButton-root VirtualKeyboard-root-1 MuiButton-contained customizer MuiButton-containedSecondary MuiButton-disableElevation MuiButton-fullWidth"
+      disabled={false}
+      onBlur={[Function]}
       onClick={[Function]}
-      role="button"
-    />
-    <i
-      aria-hidden="false"
-      aria-label="Changer la couleur du clavier"
-      className="la la-palette la-lg"
-      onClick={[Function]}
-      role="button"
-    />
-  </div>
-  <div
-    className="virtual-keyboard-letters"
-  >
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      <span
+        className="MuiButton-label"
+      >
+        <span
+          className="MuiButton-startIcon MuiButton-iconSizeMedium"
+        >
+          <i
+            aria-hidden="true"
+            className="la la-keyboard la-lg"
+            role="presentation"
+          />
+        </span>
+        Disposition
+      </span>
+    </button>
     <div
-      className="virtual-keyboard-row"
+      className="MuiBox-root MuiBox-root-3"
     >
       <div
-        aria-label="Lettre A"
-        aria-roledescription="Touche de clavier virtuel"
-        className="VirtualKey "
-        onClick={[Function]}
-        onMouseOut={[Function]}
-        onMouseOver={[Function]}
-        role="button"
+        className="MuiButtonGroup-root MuiButtonGroup-disableElevation MuiButtonGroup-contained"
+        role="group"
       >
-        A
-      </div>
-      <div
-        aria-label="Lettre B"
-        aria-roledescription="Touche de clavier virtuel"
-        className="VirtualKey "
-        onClick={[Function]}
-        onMouseOut={[Function]}
-        onMouseOver={[Function]}
-        role="button"
-      >
-        B
-      </div>
-      <div
-        aria-label="Lettre C"
-        aria-roledescription="Touche de clavier virtuel"
-        className="VirtualKey "
-        onClick={[Function]}
-        onMouseOut={[Function]}
-        onMouseOver={[Function]}
-        role="button"
-      >
-        C
-      </div>
-      <div
-        aria-label="Lettre D"
-        aria-roledescription="Touche de clavier virtuel"
-        className="VirtualKey "
-        onClick={[Function]}
-        onMouseOut={[Function]}
-        onMouseOver={[Function]}
-        role="button"
-      >
-        D
-      </div>
-      <div
-        aria-label="Lettre E"
-        aria-roledescription="Touche de clavier virtuel"
-        className="VirtualKey "
-        onClick={[Function]}
-        onMouseOut={[Function]}
-        onMouseOver={[Function]}
-        role="button"
-      >
-        E
-      </div>
-      <div
-        aria-label="Lettre F"
-        aria-roledescription="Touche de clavier virtuel"
-        className="VirtualKey "
-        onClick={[Function]}
-        onMouseOut={[Function]}
-        onMouseOver={[Function]}
-        role="button"
-      >
-        F
-      </div>
-      <div
-        aria-label="Lettre G"
-        aria-roledescription="Touche de clavier virtuel"
-        className="VirtualKey "
-        onClick={[Function]}
-        onMouseOut={[Function]}
-        onMouseOver={[Function]}
-        role="button"
-      >
-        G
-      </div>
-      <div
-        aria-label="Lettre H"
-        aria-roledescription="Touche de clavier virtuel"
-        className="VirtualKey "
-        onClick={[Function]}
-        onMouseOut={[Function]}
-        onMouseOver={[Function]}
-        role="button"
-      >
-        H
-      </div>
-      <div
-        aria-label="Lettre I"
-        aria-roledescription="Touche de clavier virtuel"
-        className="VirtualKey "
-        onClick={[Function]}
-        onMouseOut={[Function]}
-        onMouseOver={[Function]}
-        role="button"
-      >
-        I
-      </div>
-      <div
-        aria-label="Lettre J"
-        aria-roledescription="Touche de clavier virtuel"
-        className="VirtualKey "
-        onClick={[Function]}
-        onMouseOut={[Function]}
-        onMouseOver={[Function]}
-        role="button"
-      >
-        J
+        <button
+          aria-label="A"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-6 MuiButton-containedPrimary MuiButton-disableElevation"
+          disabled={false}
+          feedback=""
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            A
+          </span>
+        </button>
+        <button
+          aria-label="B"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-7 MuiButton-containedPrimary MuiButton-disableElevation"
+          disabled={false}
+          feedback=""
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            B
+          </span>
+        </button>
+        <button
+          aria-label="C"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-8 MuiButton-containedPrimary MuiButton-disableElevation"
+          disabled={false}
+          feedback=""
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            C
+          </span>
+        </button>
+        <button
+          aria-label="D"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-9 MuiButton-containedPrimary MuiButton-disableElevation"
+          disabled={false}
+          feedback=""
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            D
+          </span>
+        </button>
+        <button
+          aria-label="E"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-10 MuiButton-containedPrimary MuiButton-disableElevation"
+          disabled={false}
+          feedback=""
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            E
+          </span>
+        </button>
+        <button
+          aria-label="F"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-11 MuiButton-containedPrimary MuiButton-disableElevation"
+          disabled={false}
+          feedback=""
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            F
+          </span>
+        </button>
+        <button
+          aria-label="G"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-12 MuiButton-containedPrimary MuiButton-disableElevation"
+          disabled={false}
+          feedback=""
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            G
+          </span>
+        </button>
+        <button
+          aria-label="H"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-13 MuiButton-containedPrimary MuiButton-disableElevation"
+          disabled={false}
+          feedback=""
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            H
+          </span>
+        </button>
+        <button
+          aria-label="I"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-14 MuiButton-containedPrimary MuiButton-disableElevation"
+          disabled={false}
+          feedback=""
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            I
+          </span>
+        </button>
+        <button
+          aria-label="J"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-15 MuiButton-containedPrimary MuiButton-disableElevation"
+          disabled={false}
+          feedback=""
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            J
+          </span>
+        </button>
       </div>
     </div>
     <div
-      className="virtual-keyboard-row"
+      className="MuiBox-root MuiBox-root-16"
     >
       <div
-        aria-label="Lettre K"
-        aria-roledescription="Touche de clavier virtuel"
-        className="VirtualKey "
-        onClick={[Function]}
-        onMouseOut={[Function]}
-        onMouseOver={[Function]}
-        role="button"
+        className="MuiButtonGroup-root MuiButtonGroup-disableElevation MuiButtonGroup-contained"
+        role="group"
       >
-        K
-      </div>
-      <div
-        aria-label="Lettre L"
-        aria-roledescription="Touche de clavier virtuel"
-        className="VirtualKey "
-        onClick={[Function]}
-        onMouseOut={[Function]}
-        onMouseOver={[Function]}
-        role="button"
-      >
-        L
-      </div>
-      <div
-        aria-label="Lettre M"
-        aria-roledescription="Touche de clavier virtuel"
-        className="VirtualKey "
-        onClick={[Function]}
-        onMouseOut={[Function]}
-        onMouseOver={[Function]}
-        role="button"
-      >
-        M
-      </div>
-      <div
-        aria-label="Lettre N"
-        aria-roledescription="Touche de clavier virtuel"
-        className="VirtualKey "
-        onClick={[Function]}
-        onMouseOut={[Function]}
-        onMouseOver={[Function]}
-        role="button"
-      >
-        N
-      </div>
-      <div
-        aria-label="Lettre O"
-        aria-roledescription="Touche de clavier virtuel"
-        className="VirtualKey "
-        onClick={[Function]}
-        onMouseOut={[Function]}
-        onMouseOver={[Function]}
-        role="button"
-      >
-        O
-      </div>
-      <div
-        aria-label="Lettre P"
-        aria-roledescription="Touche de clavier virtuel"
-        className="VirtualKey "
-        onClick={[Function]}
-        onMouseOut={[Function]}
-        onMouseOver={[Function]}
-        role="button"
-      >
-        P
-      </div>
-      <div
-        aria-label="Lettre Q"
-        aria-roledescription="Touche de clavier virtuel"
-        className="VirtualKey "
-        onClick={[Function]}
-        onMouseOut={[Function]}
-        onMouseOver={[Function]}
-        role="button"
-      >
-        Q
-      </div>
-      <div
-        aria-label="Lettre R"
-        aria-roledescription="Touche de clavier virtuel"
-        className="VirtualKey "
-        onClick={[Function]}
-        onMouseOut={[Function]}
-        onMouseOver={[Function]}
-        role="button"
-      >
-        R
-      </div>
-      <div
-        aria-label="Lettre S"
-        aria-roledescription="Touche de clavier virtuel"
-        className="VirtualKey "
-        onClick={[Function]}
-        onMouseOut={[Function]}
-        onMouseOver={[Function]}
-        role="button"
-      >
-        S
-      </div>
-      <div
-        aria-label="Lettre T"
-        aria-roledescription="Touche de clavier virtuel"
-        className="VirtualKey "
-        onClick={[Function]}
-        onMouseOut={[Function]}
-        onMouseOver={[Function]}
-        role="button"
-      >
-        T
+        <button
+          aria-label="K"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-17 MuiButton-containedPrimary MuiButton-disableElevation"
+          disabled={false}
+          feedback=""
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            K
+          </span>
+        </button>
+        <button
+          aria-label="L"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-18 MuiButton-containedPrimary MuiButton-disableElevation"
+          disabled={false}
+          feedback=""
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            L
+          </span>
+        </button>
+        <button
+          aria-label="M"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-19 MuiButton-containedPrimary MuiButton-disableElevation"
+          disabled={false}
+          feedback=""
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            M
+          </span>
+        </button>
+        <button
+          aria-label="N"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-20 MuiButton-containedPrimary MuiButton-disableElevation"
+          disabled={false}
+          feedback=""
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            N
+          </span>
+        </button>
+        <button
+          aria-label="O"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-21 MuiButton-containedPrimary MuiButton-disableElevation"
+          disabled={false}
+          feedback=""
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            O
+          </span>
+        </button>
+        <button
+          aria-label="P"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-22 MuiButton-containedPrimary MuiButton-disableElevation"
+          disabled={false}
+          feedback=""
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            P
+          </span>
+        </button>
+        <button
+          aria-label="Q"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-23 MuiButton-containedPrimary MuiButton-disableElevation"
+          disabled={false}
+          feedback=""
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            Q
+          </span>
+        </button>
+        <button
+          aria-label="R"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-24 MuiButton-containedPrimary MuiButton-disableElevation"
+          disabled={false}
+          feedback=""
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            R
+          </span>
+        </button>
+        <button
+          aria-label="S"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-25 MuiButton-containedPrimary MuiButton-disableElevation"
+          disabled={false}
+          feedback=""
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            S
+          </span>
+        </button>
+        <button
+          aria-label="T"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-26 MuiButton-containedPrimary MuiButton-disableElevation"
+          disabled={false}
+          feedback=""
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            T
+          </span>
+        </button>
       </div>
     </div>
     <div
-      className="virtual-keyboard-row"
+      className="MuiBox-root MuiBox-root-27"
     >
       <div
-        aria-label="Lettre U"
-        aria-roledescription="Touche de clavier virtuel"
-        className="VirtualKey "
-        onClick={[Function]}
-        onMouseOut={[Function]}
-        onMouseOver={[Function]}
-        role="button"
+        className="MuiButtonGroup-root MuiButtonGroup-disableElevation MuiButtonGroup-contained"
+        role="group"
       >
-        U
-      </div>
-      <div
-        aria-label="Lettre V"
-        aria-roledescription="Touche de clavier virtuel"
-        className="VirtualKey "
-        onClick={[Function]}
-        onMouseOut={[Function]}
-        onMouseOver={[Function]}
-        role="button"
-      >
-        V
-      </div>
-      <div
-        aria-label="Lettre W"
-        aria-roledescription="Touche de clavier virtuel"
-        className="VirtualKey "
-        onClick={[Function]}
-        onMouseOut={[Function]}
-        onMouseOver={[Function]}
-        role="button"
-      >
-        W
-      </div>
-      <div
-        aria-label="Lettre X"
-        aria-roledescription="Touche de clavier virtuel"
-        className="VirtualKey "
-        onClick={[Function]}
-        onMouseOut={[Function]}
-        onMouseOver={[Function]}
-        role="button"
-      >
-        X
-      </div>
-      <div
-        aria-label="Lettre Y"
-        aria-roledescription="Touche de clavier virtuel"
-        className="VirtualKey "
-        onClick={[Function]}
-        onMouseOut={[Function]}
-        onMouseOver={[Function]}
-        role="button"
-      >
-        Y
-      </div>
-      <div
-        aria-label="Lettre Z"
-        aria-roledescription="Touche de clavier virtuel"
-        className="VirtualKey "
-        onClick={[Function]}
-        onMouseOut={[Function]}
-        onMouseOver={[Function]}
-        role="button"
-      >
-        Z
+        <button
+          aria-label="U"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-28 MuiButton-containedPrimary MuiButton-disableElevation"
+          disabled={false}
+          feedback=""
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            U
+          </span>
+        </button>
+        <button
+          aria-label="V"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-29 MuiButton-containedPrimary MuiButton-disableElevation"
+          disabled={false}
+          feedback=""
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            V
+          </span>
+        </button>
+        <button
+          aria-label="W"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-30 MuiButton-containedPrimary MuiButton-disableElevation"
+          disabled={false}
+          feedback=""
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            W
+          </span>
+        </button>
+        <button
+          aria-label="X"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-31 MuiButton-containedPrimary MuiButton-disableElevation"
+          disabled={false}
+          feedback=""
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            X
+          </span>
+        </button>
+        <button
+          aria-label="Y"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-32 MuiButton-containedPrimary MuiButton-disableElevation"
+          disabled={false}
+          feedback=""
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            Y
+          </span>
+        </button>
+        <button
+          aria-label="Z"
+          className="MuiButtonBase-root MuiButton-root makeStyles-root-4 MuiButton-contained VirtualKey makeStyles-active-5 makeStyles-active-33 MuiButton-containedPrimary MuiButton-disableElevation"
+          disabled={false}
+          feedback=""
+          onBlur={[Function]}
+          onClick={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseOut={[Function]}
+          onMouseOver={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <span
+            className="MuiButton-label"
+          >
+            Z
+          </span>
+        </button>
       </div>
     </div>
   </div>
