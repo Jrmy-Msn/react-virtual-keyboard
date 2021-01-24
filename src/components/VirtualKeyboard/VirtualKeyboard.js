@@ -3,12 +3,9 @@ import PropTypes from 'prop-types'
 import {
   Box,
   Button,
-  ButtonGroup,
-  Container,
   createMuiTheme,
   Grid,
-  Paper,
-  ThemeProvider, useMediaQuery,
+  ThemeProvider,
   withStyles
 } from "@material-ui/core"
 import { KeyboardIcon } from 'react-line-awesome'
@@ -48,6 +45,7 @@ class VirtualKeyboard extends Component {
     onMouseOverForKey: PropTypes.func, // (string) => void : mouse over on virtual key event handler
     onMouseOutForKey: PropTypes.func, // (string) => void : mouse out on virtual key event handler
     isKeyActive: PropTypes.func, // (string) =>  string : define a CSS classname
+    feedbackForCurrentKey: PropTypes.func, // (string) =>  string : define a CSS classname
   }
 
   static defaultProps = {
@@ -57,7 +55,8 @@ class VirtualKeyboard extends Component {
     onClickForKey: (vKey) => log('onClickForKey', 'Please provide a behavior', `[CLICK key "${vKey.toUpperCase()}"]`),
     onMouseOverForKey: (vKey) => log('onMouseOverForKey', 'Please provide a behavior', `[MOUSE OVER key "${vKey.toUpperCase()}"]`),
     onMouseOutForKey: (vKey) => log('onMouseOutForKey', 'Please provide a behavior', `[MOUSE OUT key "${vKey.toUpperCase()}"]`),
-    isKeyActive: () => void undefined
+    isKeyActive: () => void undefined,
+    feedbackForCurrentKey: () => void undefined,
   }
 
   state = {
@@ -109,10 +108,10 @@ class VirtualKeyboard extends Component {
 
   render() {
     const {theme} = this.state
-    const {classes, isKeyActive, onClickForKey, onMouseOverForKey, onMouseOutForKey} = this.props
+    const {classes, feedbackForCurrentKey, isKeyActive, onClickForKey, onMouseOverForKey, onMouseOutForKey, ...other} = this.props
     return (
       <ThemeProvider theme={theme || createMuiTheme()}>
-        <Box bgcolor={'primary.main'}>
+        <Box bgcolor={'primary.main'} {...other}>
           <Grid container
                 aria-label="clavier"
                 aria-owns=".VirtualKey"
@@ -137,6 +136,7 @@ class VirtualKeyboard extends Component {
                   <ResponsiveButtonGroup
                     disableElevation={true}
                     size={'small'}
+                    className={`${classes.key}`}
                     variant="contained"
                     color="primary">
                     {
@@ -145,6 +145,7 @@ class VirtualKeyboard extends Component {
                           key={vKey}
                           value={vKey}
                           onClick={onClickForKey}
+                          className={`${feedbackForCurrentKey(vKey)}`}
                           onMouseOver={onMouseOverForKey}
                           onMouseOut={onMouseOutForKey}
                           active={isKeyActive(vKey)}/>

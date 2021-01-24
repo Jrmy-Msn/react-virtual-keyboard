@@ -5,6 +5,7 @@ export const useStyles = makeStyles(theme => ({
     borderRight: 'none !important',
     borderRadius: 0,
     minWidth: 'inherit',
+    flexGrow: 1
   },
   active({active}) {
     return active ? {
