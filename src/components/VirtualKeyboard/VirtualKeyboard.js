@@ -60,7 +60,6 @@ class VirtualKeyboard extends Component {
   }
 
   state = {
-    theme: this.props.theme,
     layout: this.props.layout,
   }
 
@@ -107,10 +106,9 @@ class VirtualKeyboard extends Component {
   }
 
   render() {
-    const {theme} = this.state
     const {classes, feedbackForCurrentKey, isKeyActive, onClickForKey, onMouseOverForKey, onMouseOutForKey, ...other} = this.props
     return (
-      <ThemeProvider theme={theme || createMuiTheme()}>
+      <ThemeProvider theme={this.props.theme ? this.props.theme : createMuiTheme()}>
         <Box bgcolor={'primary.main'} {...other}>
           <Grid container
                 aria-label="clavier"

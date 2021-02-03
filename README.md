@@ -4,15 +4,18 @@
 
 Un clavier virtuel sous forme de composant ReactJS :
 
-![Capture d'écran du clavier virtuel](https://raw.githubusercontent.com/Jrmy-Msn/react-virtual-keyboard/main/docs/screenshot_1.png)
+![Capture d'écran du clavier virtuel theme "sombre"](https://raw.githubusercontent.com/Jrmy-Msn/react-virtual-keyboard/main/docs/screenshot_dark.png)
 
 - Plusieurs dispositions de clavier disponibles : AZERTY, QWERTY, ALPHATBET
 
 | AZERTY | QWERTY | ALPHABET |
 | ------ | ------ | -------- |
-| ![Capture d'écran du clavier virtuel AZERTY](https://raw.githubusercontent.com/Jrmy-Msn/react-virtual-keyboard/main/docs/screenshot_AZERTY_dark.png) |![Capture d'écran du clavier virtuel QWERTY](https://raw.githubusercontent.com/Jrmy-Msn/react-virtual-keyboard/main/docs/screenshot_QWERTY_dark.png) | ![Capture d'écran du clavier virtuel ALPHABET](https://raw.githubusercontent.com/Jrmy-Msn/react-virtual-keyboard/main/docs/screenshot_1.png) |
+| ![Capture d'écran du clavier virtuel AZERTY](https://raw.githubusercontent.com/Jrmy-Msn/react-virtual-keyboard/main/docs/screenshot_AZERTY.png) |![Capture d'écran du clavier virtuel QWERTY](https://raw.githubusercontent.com/Jrmy-Msn/react-virtual-keyboard/main/docs/screenshot_QWERTY.png) | ![Capture d'écran du clavier virtuel ALPHABET](https://raw.githubusercontent.com/Jrmy-Msn/react-virtual-keyboard/main/docs/screenshot_dark.png) |
 
 - possibilité de changer le theme de couleur via la props `theme`
+
+![Capture d'écran du clavier virtuel theme "clair"](https://raw.githubusercontent.com/Jrmy-Msn/react-virtual-keyboard/main/docs/screenshot_light.png)
+
 
 - Sélection des touches du clavier virtuel par clique souris ou via le clavier physique
 
@@ -22,14 +25,14 @@ Un clavier virtuel sous forme de composant ReactJS :
 
 ```js
 propTypes = {
-    layout: PropTypes.arrayOf(PropTypes.string), // keyboard layout
-    theme: PropTypes.string, // keyboard color theme
-    currentKey: PropTypes.string, // if not empty string, current virtual key selected
+    layout: PropTypes.arrayOf(PropTypes.string), // keyboard layout ('AZERTY'|'QWERTY'|'ALPHABET')
+    theme: PropTypes.string, // keyboard color theme ('light'|'dark')
     onKeyUp: PropTypes.func, // (KeyboardEvent) => void : keyup physical keyboard event handler
     onKeyDown: PropTypes.func, // (KeyboardEvent) => void : keydown physical keyboard event handler
-    onClickForKey: PropTypes.func, // (string) => void : mouse click on virtual key event handler
+    onClickKey: PropTypes.func, // (string) => void : mouse click on virtual key event handler
     onMouseOverForKey: PropTypes.func, // (string) => void : mouse over on virtual key event handler
     onMouseOutForKey: PropTypes.func, // (string) => void : mouse out on virtual key event handler
+    isKeyActive: PropTypes.func, // (string) =>  string : define a CSS classname
     feedbackForCurrentKey: PropTypes.func.isRequired, // (string) =>  string : define a CSS classname
   }
 ```
